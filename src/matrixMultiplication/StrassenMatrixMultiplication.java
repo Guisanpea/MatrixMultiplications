@@ -104,6 +104,15 @@ public class StrassenMatrixMultiplication extends DivideAndConquerMatrixMultipli
 
         return matrix;
     }
+    /*
+     * n = 512
+Brute Force took 241ms
+Strassen Method took 6800ms
 
+n = 512
+Brute Force took 248ms
+Strassen Method took 4233ms
+
+     */
 }
 

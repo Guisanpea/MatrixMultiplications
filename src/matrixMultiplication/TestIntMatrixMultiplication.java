@@ -17,7 +17,7 @@ public class TestIntMatrixMultiplication {
         final String boxFilename = "box.txt";
         
         IntMatrixMultiplication brute = new BruteForceMatrixMultiplication();
-        IntMatrixMultiplication strassen = new StrassenMatrixMultiplication();
+        IntMatrixMultiplication strassen = new MonolithicStrassen();
         IntMatrixMultiplication box = new BoxMatrixMultiplication();
         
         long[][] statsBrute    = new long [dup][nt+1];
