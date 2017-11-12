@@ -3,12 +3,16 @@ package matrixMultiplication;
 public class individualTest {
 	public static void main(String[] args) {
 		BoxMatrixMultiplication box = new BoxMatrixMultiplication();
+		StrassenMatrixMultiplication str = new StrassenMatrixMultiplication();
 		int [][] a = new int[][]{{1,2,1,2},{2,2,1,3},{1,4,1,5},{1,6,1,7}};
 		printMatrix(a);
 		int [][] b = new int[][]{{1,0,0,0},{0,1,0,0},{0,0,1,0},{0,0,0,1}};
 		printMatrix(b);
 		int [][] dest = new int[4][4];
 		printMatrix(box.mult(dest, a, b));
+		
+		int [][] dest2 = new int[4][4];
+		printMatrix(str.mult(dest2, a, b));
 	}
 	
 	
