@@ -5,7 +5,7 @@ public class individualTest {
 		BoxMatrixMultiplication box = new BoxMatrixMultiplication();
 		int [][] a = new int[][]{{1,2,1,2},{2,2,1,3},{1,4,1,5},{1,6,1,7}};
 		printMatrix(a);
-		int [][] b = new int[][]{{2,0,0,0},{0,1,0,0},{0,0,1,0},{0,0,0,1}};
+		int [][] b = new int[][]{{1,0,0,0},{0,1,0,0},{0,0,1,0},{0,0,0,1}};
 		printMatrix(b);
 		int [][] dest = new int[4][4];
 		printMatrix(box.mult(dest, a, b));
