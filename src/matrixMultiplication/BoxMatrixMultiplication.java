@@ -1,8 +1,5 @@
 package matrixMultiplication;
 
-import java.sql.Array;
-import java.util.ArrayList;
-
 public class BoxMatrixMultiplication extends DivideAndConquerMatrixMultiplication {
 
     public String getName() {
@@ -20,7 +17,7 @@ public class BoxMatrixMultiplication extends DivideAndConquerMatrixMultiplicatio
             int[][][] quadrantsB = new int[4][size / 2][size / 2];
 
             setQuadrants(a, quadrantsA);
-            setQuadrants(a, quadrantsB);
+            setQuadrants(b, quadrantsB);
 
             computeMultiplicationAndMerge(quadrantsA, quadrantsB, dest);
         }
@@ -36,13 +33,11 @@ public class BoxMatrixMultiplication extends DivideAndConquerMatrixMultiplicatio
 
     private void setQuadrantI(int[][] a, int[][][] quadrants, int quadrant) {
         int childSize = a.length / 2;
-        int iOffset;
-        int jOffset;
+        int iOffset = childSize*(quadrant/2);
+        int jOffset = childSize*(quadrant%2);
 
         for (int i = 0; i < childSize; i++) {
-            iOffset = childSize * (i % 2);
             for (int j = 0; j < childSize; j++) {
-                jOffset = childSize * (j % 2);
                 quadrants[quadrant][i][j] = a[i + iOffset][j + jOffset];
             }
         }
